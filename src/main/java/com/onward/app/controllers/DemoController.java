@@ -11,6 +11,11 @@ public class DemoController {
     public String greet() {
         return "Onward!";
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "tested!";
+    }
     
     
 }
