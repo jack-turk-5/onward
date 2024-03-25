@@ -36,11 +36,10 @@ The following Extension were used in Visual Studio Code: <br/>
     
 * Having **Extension Pack for Java**. <br>
   You can download it
-  from [Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+  from [Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
   
 * Having developed and deployed Spring Boot Application in Visual Studio Code. <br>
-  Install **Spring boot Extension Pack** [ Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack).
-
+  Install **Spring boot Extension Pack** [ Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack).
 ## _Installation_
 
 1. Clone this repository to your local machine using this
