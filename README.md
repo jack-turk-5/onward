@@ -15,7 +15,6 @@ The following technologies were used to build this application: <br/>
 + Java 17 LTS  <br/>
 + Spring Boot 3 <br/>
 + MySQL <br/>
-+ JUnit <br/>
 + Maven <br/>
 + Microsoft .NET Maui Framework <br/>
 + Visual Studio code <br/>
@@ -41,8 +40,9 @@ The following technologies were used to build this application: <br/>
    command : <br/> `git clone https://github.com/jack-turk-5/onward`
 2. Import the project into your IDE (such as Eclipse or Visual Studio code).
 3. start application from OnwardApplication.java
-4. Go to localhost:8080/ on your web browser
-5. Run the application as a Spring Boot application, or using the Maven plugin `mvn spring-boot:run`.
+4. Run the application as a Spring Boot application, or using the Maven plugin `mvn spring-boot:run`.
+5. Go to localhost:8080/ on your web browser.
+
 
 *Try adding endpoints with simple text and stuff, 
 follow the template for greeting and add endpoint methods to DemoController,
