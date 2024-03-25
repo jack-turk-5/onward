@@ -1,9 +1,10 @@
 
 ONWaRD is short for Online Network for Writing and Retrieving Data. This is a REST API service built with the Spring Boot framework, <br>
-that allows aplatform where companies can electronically manage all their data, enabling them to go paperless. <br/>
-This application is designed to demonstrate how to utilize Microsoft .NET Maui Framework, Spring Boot application,Project Lombok work together  in order to create an innovative product. <br/>
+that allows a platform where companies can electronically manage all their data, enabling them to go paperless. <br/>
+This application is designed to demonstrate how to utilize Microsoft .NET Maui Framework, Spring Boot application, and Project Lombok work together  to create an innovative product. <br/>
 
   * [_Technologies Used_](#technologies-used)
+  * [_Extension on Visual Studio Code_](#extension-on-visual-studio-code)
   * [_Requirements_](#requirements)
   * [_Installation_](#installation)
   * [_Contributing_](#contributing)
@@ -18,10 +19,12 @@ The following technologies were used to build this application: <br/>
 + Microsoft .NET Maui Framework <br/>
 + Visual Studio Code <br/>
 + Project Lombok <br/>
+
 ## _Extension on Visual Studio Code_
+
 The following Extension were used in Visual Studio Code: <br/>
-+ Extension Pack for Java v0.25.15
-+ Spring boot Extension Pack v0.2.1
++ Extension Pack for Java v0.25.15 <br/>
++ Spring boot Extension Pack v0.2.1 <br/>
 
 
 ## _Requirements_
