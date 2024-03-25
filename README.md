@@ -26,8 +26,7 @@ The following technologies were used to build this application: <br/>
   from [bellsoft's website](https://bell-sw.com/pages/downloads/#jdk-17-lts).
 
 
-* Having MySQL DataBase installed, or you can fire up an instance of MySQL using the docker-compose file provided in the
-  project. <br>
+* Having MySQL DataBase installed to store data in tables that map to objects. <br>
   Install **MySQL** from [MySQL's website](https://dev.mysql.com/downloads/mysql/).
 
 
