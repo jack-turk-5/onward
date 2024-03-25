@@ -14,7 +14,6 @@ This application is designed to demonstrate how to utilize Microsoft .NET Maui F
 The following technologies were used to build this application: <br/>
 + Java 17 LTS  <br/>
 + Spring Boot 3 <br/>
-+ MySQL <br/>
 + Maven <br/>
 + Microsoft .NET Maui Framework <br/>
 + Visual Studio code <br/>
@@ -24,11 +23,6 @@ The following technologies were used to build this application: <br/>
 * Having **Java 17 LTS** or later installed. <br>
   You can download it
   from [bellsoft's website](https://bell-sw.com/pages/downloads/#jdk-17-lts).
-
-
-* Having MySQL DataBase installed to store data in tables that map to objects. <br>
-  Install **MySQL** from [MySQL's website](https://dev.mysql.com/downloads/mysql/).
-
 
 * Having a software project management and comprehension tool. <br>
   Install **Apache Maven 3.9.6** from [Maven's website](https://maven.apache.org/download.cgi).
