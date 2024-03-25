@@ -16,16 +16,30 @@ The following technologies were used to build this application: <br/>
 + Spring Boot 3 <br/>
 + Maven <br/>
 + Microsoft .NET Maui Framework <br/>
-+ Visual Studio code <br/>
++ Visual Studio Code <br/>
 + Project Lombok <br/>
+## _Extension on Visual Studio Code_
+The following Extension were used in Visual Studio Code: <br/>
++ Extension Pack for Java v0.25.15
++ Spring boot Extension Pack v0.2.1
+
+
 ## _Requirements_
 
 * Having **Java 17 LTS** or later installed. <br>
   You can download it
   from [bellsoft's website](https://bell-sw.com/pages/downloads/#jdk-17-lts).
 
+
 * Having a software project management and comprehension tool. <br>
   Install **Apache Maven 3.9.6** from [Maven's website](https://maven.apache.org/download.cgi).
+    
+* Having **Extension Pack for Java**. <br>
+  You can download it
+  from [Visual Studio's marketplace]([https://bell-sw.com/pages/downloads/#jdk-17-lts](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)).
+  
+* Having developed and deployed Spring Boot Application in Visual Studio Code. <br>
+  Install **Spring boot Extension Pack** from Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack).
 
 ## _Installation_
 
