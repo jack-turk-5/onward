@@ -33,7 +33,6 @@ The following Extension were used in Visual Studio Code: <br/>
   You can download it
   from [bellsoft's website](https://bell-sw.com/pages/downloads/#jdk-17-lts).
 
-
 * Having a software project management and comprehension tool. <br>
   Install **Apache Maven 3.9.6** from [Maven's website](https://maven.apache.org/download.cgi).
     
@@ -43,6 +42,7 @@ The following Extension were used in Visual Studio Code: <br/>
   
 * Having developed and deployed Spring Boot Application in Visual Studio Code. <br>
   Install **Spring boot Extension Pack** [ Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack).
+  Alternatively, Your preferred IDE also a Spring Boot extension option.
 ## _Installation_
 
 1. Clone this repository to your local machine using this
