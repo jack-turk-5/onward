@@ -51,7 +51,7 @@ The following Extension were used in Visual Studio Code: <br/>
 
 
   
-## _Installation_
+## _Installation&Run_
 
 1. Clone this repository to your local machine using this
    command : <br/> `git clone https://github.com/jack-turk-5/onward`
