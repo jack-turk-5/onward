@@ -8,6 +8,7 @@ This application demonstrates how to utilize Microsoft .NET Maui Framework, Spri
   * [_Installation_](#installation)
   * [_Contributing_](#contributing)
   * [_License_](#license)
+  * [_Acknowledgements_](#acknowledgements)
 
 ## _Technologies Used_
 
@@ -56,7 +57,7 @@ Optional:
 
 
   
-## _Installation&Run_
+## _Installation_
 
 1. Clone this repository to your local machine using this
    command: <br/> `git clone https://github.com/jack-turk-5/onward`
@@ -97,9 +98,23 @@ We learned to combine Spring Boot, Microsoft .NET framework, and Project Lombok 
 
 
 ## _Contributing_
-
-
+To make effective contributions to this software, follow these steps:
+1. Fork this repository to your GitHub account.
+2. Clone the forked repository to your local machine.
+3. Create a new branch for your changes.
+4. Make your changes and commit with descriptive commit messages in the following format:
+5. Push your changes to your GitHub account.
+6. Create a pull request from your branch to the original repository's main branch.
+When making contributions, please keep the following in mind:
+* Follow the code style and formatting guidelines used in the project.
+* Follow the format for commit messages and be concise.
+* Make sure that your changes do not break existing functionality.
+*Write tests for any new code and ensure that all existing tests pass.
 
 ## _License_
 
 Users outside have the right to use, copy, modify, and distribute the code included in this project (3/26/2024).
+
+## _Acknowledgements_
+
+This README structure was based on that within Nidhal Naffati's Rental-Car-Agency repository, which happened to use a very similar technology set as our project. The repository for this can be found here: [Car Rental Agency](https://github.com/NidhalNaffati/Rental-Car-Agency).
