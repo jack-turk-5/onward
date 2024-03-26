@@ -83,8 +83,27 @@ The first slash is important
 
 ## _Contributing_
 
+In order to make effective contributions to this software, follow these steps:
+1. Fork this repository to your GitHub account.
+2. Clone the forked repository to your local machine.
+3. Create a new branch for your changes.
+4. Make your changes and commit with descriptive commit messages in the following format:
 
+5. Push your changes to your GitHub account.
+6. Create a pull request from your branch to the original repository's main branch.
+
+When making contributions, please keep the following in mind:
+
++ Follow the code style and formatting guidelines used in the project.
++ Follow the format for commit messages and be concise.
++ Make sure that your changes do not break existing functionality.
++ Write tests for any new code and ensure that all existing tests pass.
 
 ## _License_
 
 You are allowed to use, copy, modify, and distribute the code freely.
+
+## _Acknowledgements_
+
+This README structure was based on that within Nidhal Naffati's Rental-Car-Agency repository, which happened to use a very similar technology set as our project. The repository for this can be found here:
+[insert link later].
