@@ -71,8 +71,21 @@ just make sure you do it in the form @GetMapping("/YOURTEXTHERE")
 The first slash is important
 
 ## _Architecture_
+Backend
+* Spring Boot 3 & Java 17 LTS: The core of our backend services, providing REST API endpoints for data management and retrieval. It's configured for high availability and resilience, allowing for scalable microservices architecture.
+* Maven: Used for dependency management and project build, Maven facilitates our continuous integration and deployment pipeline, ensuring consistent builds and version management.
+* Project Lombok: Integrated to reduce boilerplate code, such as getters/setters, making the codebase more readable and easier to maintain.
 
+Frontend
+* Microsoft .NET MAUI Framework: Our choice for the frontend to create a responsive and interactive user interface that operates across different platforms (Windows, macOS, iOS, Android) with a single codebase.
+* C# and XAML: The primary languages used for development, where C# provides the logic and XAML defines the UI layout and design. This combination ensures a powerful yet flexible way to build our app’s interface.
 
+Development Environment
+* Visual Studio Code: The main Integrated Development Environment (IDE) used for the project, supported by various extensions to enhance productivity, such as: Extension Pack for Java, Spring Boot Extension Pack, .NET Extension Pack, and more for comprehensive development support.
+
+Integration and Data Management
+* JSON: Standard format for data exchange between the frontend and backend, ensuring compatibility and ease of data manipulation.
+* API Endpoints: RESTful services designed for efficient data writing and retrieval, supporting various functionalities needed by the application.
 
 ## _Knowledge Gained_
 We learned to combine Spring Boot, Microsoft .NET framework, and Project Lombok to create a product.
