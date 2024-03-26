@@ -16,9 +16,12 @@ The following technologies were used to build this application: <br/>
 + Java 17 LTS  <br/>
 + Spring Boot 3 <br/>
 + Maven <br/>
-+ Microsoft .NET Maui Framework <br/>
-+ Visual Studio Code <br/>
 + Project Lombok <br/>
++ Microsoft .NET Maui Framework <br/>
++ C#
++ XAML
++ Visual Studio Code <br/>
++ JSON
 
 ## _Extension on Visual Studio Code_
 
@@ -35,6 +38,9 @@ The following Extension were used in Visual Studio Code: <br/>
 
 * Having a software project management and comprehension tool. <br>
   Install **Apache Maven 3.9.6** from [Maven's website](https://maven.apache.org/download.cgi).
+
+  * Having Microsoft .NET Maui Framework for Front end. <br>
+  Install **Microsoft .NET Maui Framework 8.0.3 ** from [Microsoft's website](https://dotnet.microsoft.com/en-us/download).
     
 * Having **Extension Pack for Java**. <br>
   You can download it
