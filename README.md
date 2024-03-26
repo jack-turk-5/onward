@@ -28,6 +28,12 @@ The following technologies were used to build this application: <br/>
 The following Extension were used in Visual Studio Code: <br/>
 + Extension Pack for Java v0.25.15 <br/>
 + Spring boot Extension Pack v0.2.1 <br/>
++ .NET Extension Pack v1.0.13<br/>
++ C# v2.22.5 <br/>
++ CS-Script v2.2.1<br/>
+Optional:
++ Spring Boot Dashboard v0.2.1 <br/>
+
 
 ## _Requirements_
 
