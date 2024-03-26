@@ -79,6 +79,7 @@ Backend
 Frontend
 * Microsoft .NET MAUI Framework: Our choice for the frontend to create a responsive and interactive user interface that operates across different platforms (Windows, macOS, iOS, Android) with a single codebase.
 * C# and XAML: The primary languages used for development, where C# provides the logic and XAML defines the UI layout and design. This combination ensures a powerful yet flexible way to build our app’s interface.
+
 Development Environment
 * Visual Studio Code: The main Integrated Development Environment (IDE) used for the project, supported by various extensions to enhance productivity, such as: Extension Pack for Java, Spring Boot Extension Pack, .NET Extension Pack, and more for comprehensive development support.
 
