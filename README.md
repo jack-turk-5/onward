@@ -45,7 +45,7 @@ Optional:
   Install **Apache Maven 3.9.6** from [Maven's website](https://maven.apache.org/download.cgi).
 
 * Having Microsoft .NET Maui Framework for the Front end. <br>
-  Install **Microsoft .NET Maui Framework 8.0.3 ** from [Microsoft's website](https://dotnet.microsoft.com/en-us/download).
+  Install **Microsoft .NET Maui Framework 8.0.3** from [Microsoft's website](https://dotnet.microsoft.com/en-us/download).
     
 * Having **Extension Pack for Java**. <br>
   You can download it
