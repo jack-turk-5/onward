@@ -1,7 +1,7 @@
 
 ONWaRD is short for Online Network for Writing and Retrieving Data. This is a REST API service built with the Spring Boot framework, <br>
 that allows a platform where companies can electronically manage all their data, enabling them to go paperless. <br/>
-This application is designed to demonstrate how to utilize Microsoft .NET Maui Framework, Spring Boot application, and Project Lombok work together  to create an innovative product. <br/>
+This application demonstrates how to utilize Microsoft .NET Maui Framework, Spring Boot application, and Project Lombok work together  to create an innovative product. <br/>
 
   * [_Technologies Used_](#technologies-used)
   * [_Extension on Visual Studio Code_](#extension-on-visual-studio-code)
@@ -29,7 +29,6 @@ The following Extension were used in Visual Studio Code: <br/>
 + Extension Pack for Java v0.25.15 <br/>
 + Spring boot Extension Pack v0.2.1 <br/>
 
-
 ## _Requirements_
 
 * Having **Java 17 LTS** or later installed. <br>
@@ -39,7 +38,7 @@ The following Extension were used in Visual Studio Code: <br/>
 * Having a software project management and comprehension tool. <br>
   Install **Apache Maven 3.9.6** from [Maven's website](https://maven.apache.org/download.cgi).
 
-  * Having Microsoft .NET Maui Framework for Front end. <br>
+* Having Microsoft .NET Maui Framework for the Front end. <br>
   Install **Microsoft .NET Maui Framework 8.0.3 ** from [Microsoft's website](https://dotnet.microsoft.com/en-us/download).
     
 * Having **Extension Pack for Java**. <br>
@@ -48,7 +47,10 @@ The following Extension were used in Visual Studio Code: <br/>
   
 * Having developed and deployed Spring Boot Application in Visual Studio Code. <br>
   Install **Spring boot Extension Pack** [ Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack).
-  Alternatively, Your preferred IDE also a Spring Boot extension option.
+  Alternatively, Your preferred IDE also has a Spring Boot extension option.
+
+
+  
 ## _Installation_
 
 1. Clone this repository to your local machine using this
