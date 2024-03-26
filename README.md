@@ -77,7 +77,10 @@ The first slash is important
 ## _Knowledge Gained_
 We learned to combine Spring Boot, Microsoft .NET framework, and Project Lombok to create a product.
 * Spring Boot 3 basic functionality and implementation.
-*  Understand Use the Basics implementation of the Microsoft.NET framework.
+* Understand the Basics implementation of the Microsoft.NET framework in building multi-platforms app  in the C# codebase.
+* Converting data into and out of JSON into different formats.
+* Follow Software Engineering principles.
+* Implement the basic Project Lombok functions to boost productivity in development.
 
 
 ## _Contributing_
