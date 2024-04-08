@@ -15,7 +15,9 @@ import lombok.NoArgsConstructor;
 public class Customer {
 
     private String name;
+    private String role;
     @Id
+    
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     

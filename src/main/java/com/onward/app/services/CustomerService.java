@@ -13,11 +13,31 @@ public class CustomerService{
 
     @Autowired
     private CustomerRepository customerRepository;
-
-    public Customer saveCustomer(Customer emp){
-        return customerRepository.save(emp);
+    //save Customer instance(Vinh)
+    public Customer saveCustomer(Customer cus){
+        return customerRepository.save(cus);
+    }
+    //get a list of Customer(Vinh)
+    public List<Customer> fetchCustomer(){
+        return (List<Customer>) customerRepository.findAll();
     }
     
-
+    public Customer updateCustomer(Customer cus){
+        //find the Customer information(Vinh)
+        Customer db = customerRepository.findById(cus.getId()).get();
+        //update name(Vinh)
+        if(cus.getName() != db.getName()){
+            cus.setName(db.getName());
+        }
+        //update Role(Vinh)
+        if(cus.getRole() != db.getRole()){
+            cus.setRole(db.getRole());
+        }
+        return customerRepository.save(cus);
+    }
+    //delete: Customer(Vinh)
+    public void deleteCustomerById(Long id){
+        customerRepository.deleteById(id);
+    }
 
 }
