@@ -32,7 +32,7 @@ The following Extension were used in Visual Studio Code: <br/>
 + C# v2.22.5 <br/>
 + CS-Script v2.2.1<br/>
 Optional:
-+ Spring Boot Dashboard v0.2.1 <br/>
++ Eclipse Temurin v21.0.2+13 <br/>
 
 
 ## _Requirements_
@@ -54,9 +54,10 @@ Optional:
 * Having developed and deployed Spring Boot Application in Visual Studio Code. <br>
   Install **Spring boot Extension Pack** [ Visual Studio's marketplace](https://marketplace.visualstudio.com/items?itemName=vmware.vscode-boot-dev-pack).
   Alternatively, Your preferred IDE also has a Spring Boot extension option.
-
-
   
+  *(Optional)having a open source JavaSE build based on OpenJDK.This might be needed if you do not have a binary build of OpenJDK. <br>
+  Install **Eclipse Temurin** [Adoptium](https://adoptium.net/).
+
 ## _Installation_
 
 1. Clone this repository to your local machine using this
