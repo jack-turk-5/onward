@@ -9,20 +9,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.onward.app.entities.Customer;
 import com.onward.app.services.CustomerService;
-/*This file is created  edited by Vinh Huynh(issue #4)  */
+/*This file is created  edited by Vinh Huynh(issue #4) 
+ * This a file about class customer
+ */
 public class CustomerController {
     
     @Autowired
     private CustomerService customerService;
-    //Create
+    //Create customer , it read json
     @PostMapping(value = "/customers", consumes = "application/json")
     @CrossOrigin
-    //Add customer 
+    //Add customer and teh paramter of a Customer
     public Customer addCustomer(@RequestBody Customer cus){
         return customerService.saveCustomer(cus);
     }
 
-    //Read from lsit customers
+    //Read from list of customers
     @GetMapping("/customers")
     public List<Customer> fetchCustomer(){
         return customerService.fetchCustomer();
