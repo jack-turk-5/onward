@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.onward.app.entities.Customer;
 import com.onward.app.services.CustomerService;
-/*This file is created  edited by Vinh Huynh */
+/*This file is created  edited by Vinh Huynh(issue #4)  */
 public class CustomerController {
     
     @Autowired
@@ -22,7 +22,7 @@ public class CustomerController {
         return customerService.saveCustomer(cus);
     }
 
-    //Read
+    //Read from lsit customers
     @GetMapping("/customers")
     public List<Customer> fetchCustomer(){
         return customerService.fetchCustomer();
