@@ -7,35 +7,37 @@ import org.springframework.stereotype.Service;
 
 import com.onward.app.entities.Customer;
 import com.onward.app.repositories.CustomerRepository;;
-/*The author of the file: Vinh Huynh (issue #4) */
+/*The author of the file: Vinh Huynh (issue #4) 
+ * This file is will basic funtion for to manage Customer List
+*/
 @Service
 public class CustomerService{
 
     @Autowired
     private CustomerRepository customerRepository;
-    //save Customer instance
+    //Save Customer instance
     public Customer saveCustomer(Customer cus){
         return customerRepository.save(cus);
     }
-    //get a list of Customer
+    //Get a list of Customer
     public List<Customer> fetchCustomer(){
         return (List<Customer>) customerRepository.findAll();
     }
     
     public Customer updateCustomer(Customer cus){
-        //find the Customer information
+        //Find the Customer information
         Customer db = customerRepository.findById(cus.getId()).get();
-        //update name
+        //Update name
         if(cus.getName() != db.getName()){
             cus.setName(db.getName());
         }
-        //update Role
+        //Update role
         if(cus.getRole() != db.getRole()){
             cus.setRole(db.getRole());
         }
         return customerRepository.save(cus);
     }
-    //delete: Customer
+    //Delete customer
     public void deleteCustomerById(Long id){
         customerRepository.deleteById(id);
     }
