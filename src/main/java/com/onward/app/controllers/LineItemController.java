@@ -12,14 +12,14 @@ import java.util.List;
  * LineItemController class that exposes LineItem services as RESTful endpoints.
  */
 @RestController
-@RequestMapping("/api/lineitems")
+@RequestMapping("/lineitems")
 public class LineItemController 
 {
     @Autowired
     private LineItemService lineitemService;
 
     // Retrieves all line items
-    @GetMapping("/lineitem")
+    @GetMapping("/lineitems")
     public List<LineItem> getAllLineItems() 
     {
         return lineitemService.listAll();
