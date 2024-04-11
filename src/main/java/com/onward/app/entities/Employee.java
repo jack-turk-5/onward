@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+// Made by Jack Turk
 @Entity
 @Data
 @NoArgsConstructor

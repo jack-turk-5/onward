@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.onward.app.entities.Employee;
 import com.onward.app.repositories.EmployeeRepositroy;
 
+// Made by Jack Turk
 @Service
 public class EmployeeService {
 
