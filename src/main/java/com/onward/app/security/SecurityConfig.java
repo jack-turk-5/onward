@@ -1,58 +1,101 @@
 package com.onward.app.security;
 
-import org.springframework.context.annotation.Bean; 
-import org.springframework.context.annotation.Configuration; 
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity; 
-import org.springframework.security.config.annotation.web.builders.HttpSecurity; 
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity; 
-import org.springframework.security.core.userdetails.User; 
-import org.springframework.security.core.userdetails.UserDetails; 
-import org.springframework.security.core.userdetails.UserDetailsService; 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; 
-import org.springframework.security.crypto.password.PasswordEncoder; 
-import org.springframework.security.provisioning.InMemoryUserDetailsManager; 
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import static org.springframework.security.config.Customizer.withDefaults;
+import com.onward.app.user.UserInfoService;
 
-// Made by Jack Turk
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    // User Creation 
-    @Bean
-    UserDetailsService userDetailsService(PasswordEncoder encoder) { 
-  
-        // InMemoryUserDetailsManager 
-        UserDetails admin = User.withUsername("Jack") 
-                .password(encoder.encode("123")) 
-                .roles("ADMIN", "USER") 
-                .build(); 
-  
-        UserDetails user = User.withUsername("JackUser") 
-                .password(encoder.encode("123")) 
-                .roles("USER") 
-                .build(); 
-  
-        return new InMemoryUserDetailsManager(admin, user); 
-    }
+    @Autowired
+    private JwtAuthFilter authFilter;
 
+    // User Creation
+    @Bean
+    UserDetailsService userDetailsService() {
+        return new UserInfoService();
+    }
+    
     // Configuring HttpSecurity 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception { 
         return http.csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/auth/welcome").permitAll())
-                .authorizeHttpRequests(requests -> requests.requestMatchers("/auth/user/**").authenticated())
-                .authorizeHttpRequests(requests -> requests.requestMatchers("/auth/admin/**").authenticated()).formLogin(withDefaults()).build(); 
+                    .cors(cors -> cors.disable())
+                    .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/auth/**").permitAll())
+                    .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/measurement/**")
+                    .hasAnyRole("MEASUREMENT", "ADMIN"))
+                    .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/electrical/**")
+                    .hasAnyRole("ELECTRICAL", "ADMIN"))
+                    .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/roustabout/**")
+                    .hasAnyRole("ROUSTABOUT", "ADMIN"))
+                    .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/automation/**")
+                    .hasAnyRole("AUTOMATION", "ADMIN"))
+                    .authorizeHttpRequests(auth -> auth
+                    .anyRequest().authenticated()
+                    )
+                    .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                    .authenticationProvider(authenticationProvider())
+                    .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)
+                    .build();
     }
 
-    // Password Encoding 
     @Bean
-    PasswordEncoder passwordEncoder() { 
-        return new BCryptPasswordEncoder(); 
+    CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("*"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+
+    @Bean
+    PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    AuthenticationProvider authenticationProvider() { 
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider(); 
+        authenticationProvider.setUserDetailsService((userDetailsService())); 
+        authenticationProvider.setPasswordEncoder(passwordEncoder()); 
+        return authenticationProvider; 
     } 
-  
-} 
+
+    @Bean
+    AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception{
+        return config.getAuthenticationManager();
+    }
+
+    
+}
