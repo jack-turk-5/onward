@@ -2,11 +2,9 @@
 package com.onward.app.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.onward.app.entities.LineItem;
-import com.onward.app.repositories.LineItemRepository;
-
 import java.util.List;
+import com.onward.app.repositories.LineItemRepository;
+import com.onward.app.entities.LineItem;
 
 /**
  * LineItemService class that serves as the service layer for business logic,
@@ -16,17 +14,54 @@ import java.util.List;
 public class LineItemService 
 {
     @Autowired
-    private LineItemRepository repository;
+    private LineItemRepository LineItemRepository;
 
     // Retrieves all line items from the database
     public List<LineItem> listAll() 
     {
-        return repository.findAll();
+        return (List<LineItem>) LineItemRepository.findAll();
+    }
+
+    // update
+    public LineItem update(LineItem lineItem)
+    {
+        LineItem data_base = LineItemRepository.findById(lineItem.getId()).get();
+        
+        // name
+        if(lineItem.getName() != data_base.getName())
+        {
+            lineItem.setName(data_base.getName());
+        }
+
+        // quantity
+        if(lineItem.getQuantity() != data_base.getQuantity())
+        {
+            lineItem.setQuantity(data_base.getQuantity());
+        }
+        // description
+        if(lineItem.getDescription() != data_base.getDescription())
+        {
+            lineItem.setDescription(data_base.getDescription());
+        }
+
+        // price
+        if(lineItem.getPrice() != data_base.getPrice())
+        {
+            lineItem.setPrice(data_base.getPrice());
+        }
+
+        return LineItemRepository.save(lineItem);
     }
     
     // Saves a line item to the database
-    public LineItem save(LineItem lineItem) 
+    public LineItem saveLI(LineItem lineItem) 
     {
-        return repository.save(lineItem);
+        return LineItemRepository.save(lineItem);
+    }
+
+    // delete
+    public void remove(Long id)
+    {
+        LineItemRepository.deleteById(id);
     }
 }

@@ -1,6 +1,6 @@
 // Author: Loc Ha
 package com.onward.app.repositories;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.onward.app.entities.LineItem;
@@ -10,5 +10,5 @@ import com.onward.app.entities.LineItem;
  * Inherits JpaRepository to leverage Spring Data JPA functionalities.
  */
 @Repository
-public interface LineItemRepository extends JpaRepository<LineItem, Long> {
+public interface LineItemRepository extends CrudRepository<LineItem, Long> {
 }
