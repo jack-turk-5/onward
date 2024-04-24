@@ -4,8 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.onward.app.entities.Customer;
 import com.onward.app.services.CustomerService;
@@ -29,4 +32,15 @@ public class CustomerController {
     public List<Customer> fetchCustomer(){
         return customerService.fetchCustomer();
     }
+    //edit customer name and role
+    @PutMapping("/customers")
+    public Customer editCustomer(@RequestBody Customer cus){
+        return customerService.updateCustomer(cus);
+    }
+    //Delete customer by id
+    @DeleteMapping("/customer")
+    public void deleteCustomer(@PathVariable Long id){
+        customerService.deleteCustomerById(id);
+    }
+
 }
