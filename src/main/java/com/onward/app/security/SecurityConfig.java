@@ -47,18 +47,6 @@ public class SecurityConfig {
                     .authorizeHttpRequests(auth -> auth
                     .requestMatchers("/auth/**").permitAll())
                     .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/measurement/**")
-                    .hasAnyRole("MEASUREMENT", "ADMIN"))
-                    .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/electrical/**")
-                    .hasAnyRole("ELECTRICAL", "ADMIN"))
-                    .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/roustabout/**")
-                    .hasAnyRole("ROUSTABOUT", "ADMIN"))
-                    .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/automation/**")
-                    .hasAnyRole("AUTOMATION", "ADMIN"))
-                    .authorizeHttpRequests(auth -> auth
                     .anyRequest().authenticated()
                     )
                     .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

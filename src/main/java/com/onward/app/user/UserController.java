@@ -16,6 +16,7 @@ import com.onward.app.security.JwtService;
 @RestController
 @CrossOrigin
 @RequestMapping("/auth")
+//TODO once this runs on server must be authenticated to create users
 public class UserController {
 
     @Autowired
