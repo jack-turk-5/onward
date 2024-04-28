@@ -40,6 +40,7 @@ public class SecurityConfig {
     }
     
     // Configuring HttpSecurity 
+    //TODO reconfigure to block login once temp db no longer used
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception { 
         return http.csrf(csrf -> csrf.disable())
