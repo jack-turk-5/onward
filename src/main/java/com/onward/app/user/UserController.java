@@ -46,7 +46,7 @@ public class UserController {
     }
     */
 
-    @PostMapping("/login") 
+    @PostMapping(path = "/login", consumes = "application/json") 
     public String authenticateAndGetToken(@RequestBody AuthRequest authRequest) { 
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())); 
         if (authentication.isAuthenticated()) { 
