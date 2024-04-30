@@ -22,6 +22,6 @@ public class Employee {
     @Id
     @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     
 }

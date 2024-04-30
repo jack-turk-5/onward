@@ -16,7 +16,7 @@ import java.util.List;
  * LineItemController class that exposes LineItem services as RESTful endpoints.
  */
 @RestController
-@RequestMapping("/lineitem")
+@RequestMapping("/lineitems")
 public class LineItemController 
 {
     @Autowired

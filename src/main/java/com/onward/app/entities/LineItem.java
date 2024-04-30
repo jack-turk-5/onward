@@ -1,5 +1,7 @@
 // Author: Loc Ha
 package com.onward.app.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,11 +20,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // Project Lombok will generate getters and setters
 public class LineItem 
 {
+    private String name; // Name of the item
+    private String quantity; // Description of the item
+    private String description; // Quantity of the item
+    private String price; // Price of the item
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonIgnore
     private Long id; // Unique identifier for each line item
-    private String name; // Name of the item
-    private int quantity; // Description of the item
-    private String description; // Quantity of the item
-    private double price; // Price of the item
 }

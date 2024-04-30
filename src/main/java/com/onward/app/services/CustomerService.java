@@ -28,12 +28,12 @@ public class CustomerService{
         //Find the Customer information
         Customer db = customerRepository.findById(cus.getId()).get();
         //Update name
-        if(cus.getName() != db.getName()){
-            cus.setName(db.getName());
+        if(cus.getCompany() != db.getCompany()){
+            cus.setCompany(db.getCompany());
         }
         //Update role
-        if(cus.getRole() != db.getRole()){
-            cus.setRole(db.getRole());
+        if(cus.getContactPerson() != db.getContactPerson()){
+            cus.setContactPerson(db.getContactPerson());
         }
         return customerRepository.save(cus);
     }
